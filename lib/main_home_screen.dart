@@ -1,4 +1,5 @@
 import 'package:english_academy/frequency_adverbs_ex.dart';
+import 'package:english_academy/simple_question_home.dart';
 import 'package:english_academy/to_be_ex.dart';
 import 'package:english_academy/to_do_ex.dart';
 import 'package:english_academy/to_have_ex.dart';
@@ -52,10 +53,18 @@ class _MainHomeState extends State<MainHome> {
             color: Colors.blue,
           ),
           RaisedButton(
-            onPressed: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>ToDoEx()));
+            onPressed: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ToDoEx()));
+
             },
             child: Text('To Do'),
+            color: Colors.blue,
+          ),
+
+          RaisedButton(
+            onPressed: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>SimpleQuestionHome()));
+
+            },
+            child: Text('Simple Question'),
             color: Colors.blue,
           )
 
