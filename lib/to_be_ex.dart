@@ -18,11 +18,10 @@ class ToBeEx extends StatelessWidget {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('The',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                Text('To',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                 SizedBox(width: 8.0,),
-                Text('Simple',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Tense',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
+                Text('Be',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+
               ],
             ),
 
