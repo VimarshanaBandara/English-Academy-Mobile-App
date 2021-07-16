@@ -1,6 +1,3 @@
-
-//GRADIENT
-
 import 'package:flutter/material.dart';
 class SimpleTenseEx extends StatelessWidget {
   const SimpleTenseEx({Key? key}) : super(key: key);

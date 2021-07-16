@@ -1,4 +1,5 @@
 import 'package:english_academy/home_screen.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:english_academy/tenses_theory.dart';
 import 'package:flutter/material.dart';
 void main(){
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TensesTheory(),
+      home: MainHome(),
     );
   }
 }
