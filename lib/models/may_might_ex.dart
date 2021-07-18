@@ -22,7 +22,7 @@ class MayMightEx extends StatelessWidget {
                 SizedBox(width: 8.0,),
                 Text('/',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                 SizedBox(width: 8.0,),
-                Text('Migth',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
+                Text('Might',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
               ],
             ),
 

@@ -76,7 +76,7 @@ class _CouldHaveBeenExState extends State<CouldHaveBeenEx> {
             Divider(),
             ListTile(
               title: Text('ඔවුන් පොසත්ව ඉන්න තිබුනා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('They could have been at bus stop.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('They could have been rich.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
 

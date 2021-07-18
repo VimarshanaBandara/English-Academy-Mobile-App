@@ -11,7 +11,7 @@ class _CouldBeExState extends State<CouldBeEx> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Could have'),
+        title: Text('Could Be'),
         backgroundColor: Colors.pink.shade300,
         centerTitle: true,
       ),
@@ -21,72 +21,52 @@ class _CouldBeExState extends State<CouldBeEx> {
           children: [
             ListTile(
               title: Text('ඇය ගුරුවරියක් වෙන්නත් පුළුවන්',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('You could have seen.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('She could be a teacher.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
               title: Text('එය මිල අධික වෙන්නත් පුළුවන්',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('They could have gone .',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('It could be expensive .',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
               title: Text('ඇය උය උයා ඉන්නවා වෙන්නත් පුළුවන්',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('She could have scolded you.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('She could be cooking.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
-              title: Text('ඔවුන්ට මුණගැහෙන්න තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('They could have met.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              title: Text('විභාගය ලේසි වෙන්නත් පුළුවන්.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('The exam could be easy',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
-              title: Text('ඔයාට ආදරය කරන්න තිබුනා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('You could have loved.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              title: Text('ඔවුන් යහලුවන් වෙන්නත් පුළුවන්',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('They could be friends.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
-              title: Text('ඇයට call කරන්න තිබුනා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('She could have called.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              title: Text('ඔවුන් සින්දු කියමින් ඉන්නවා වෙන්නත් පුළුවන්',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('They could be singing.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
-              title: Text('ඔවුන්ට ගෙවන්න තිබනා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('They could have paid.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              title: Text('ඇයට මහන්සි වෙන්නත් පුළුවන්',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('She could be tired.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
-              title: Text('ඇයට විකුණන්න තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('She could have sold.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              title: Text('ඔහු ප්‍රමාද වෙන්නත් පුළුවන්.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('He could be late.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
-              title: Text('ඔහුට සම්පුර්ණ කරන්න තිබුනා. ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('He could have completed.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              title: Text('ඔවුන් ගෙදර වෙන්නත් පුළුවන්.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('They could be at the home.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
             ListTile(
-              title: Text('ඔවුන්ට ඔහුට කියන්න තිබුනා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('They could have told him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-            ),
-            Divider(),
-            ListTile(
-              title: Text('ඔහුට එන්න තිබුනා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('He could have came.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-            ),
-            Divider(),
-            ListTile(
-              title: Text('ඇයට සමත්වෙන්න තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('She could have passed.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-            ),
-            Divider(),
-            ListTile(
-              title: Text('ඔහුට සකස් කරන්න තිබුනා  .',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('He could have arranged..',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-            ),
-            Divider(),
-            ListTile(
-              title: Text('ඔවුන්ට සොයා ගන්න තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-              subtitle: Text('They could have found.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+              title: Text('ඔබ කාර්යබහුල වෙන්නත් පුළුවන්',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('You could be busy.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
 
