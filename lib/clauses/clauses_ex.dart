@@ -119,6 +119,46 @@ class _ClausesExState extends State<ClausesEx> {
               subtitle: Text('I know whose project this is.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
+            ListTile(
+              title: Text('මට විශ්වාස කරන්න බෑ ඔයා එහෙම කළේ කොහොමද කියලා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('I can\'t believe hoe you do it.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('ඔයා දන්නවාද ඇය කව්ද කියලා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('Do you know who she is.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('මම දන්නවා ඔයා මොනවද හිතන්නේ කියලා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('I know what you are thinking.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('ඇය මට කිව්වා ඇය upset වෙලා හිටියේ ඇයි කියලා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('She told me why she was upset.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('ඔයා දන්නවාද මම ඔයාට කොච්චර ආදරේ කියල.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('Do you know how much i love you.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('මම දන්නවා මේ ව්‍යාපෘතිය කාගේද කියලා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('I know whose project this is.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('අපි දන්නේ නෑ ඔයා කාවද තෝරා ගන්නේ කියලා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('We don\'t know whom you select.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('මම හිත හිතා ඉන්නේ ඇය මාව අමතක කළේ ඇයි කියලා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              subtitle: Text('I am thinking why she forgot me.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+            ),
+            Divider(),
 
           ],
         ),

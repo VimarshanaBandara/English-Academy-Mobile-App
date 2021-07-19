@@ -1,5 +1,7 @@
+import 'package:english_academy/clauses/clauses_ex.dart';
 import 'package:english_academy/frequency_adverbs_ex.dart';
 import 'package:english_academy/models/models_home.dart';
+import 'package:english_academy/passive%20voice/passive_voice_home.dart';
 import 'package:english_academy/relative_clauses/relative_home.dart';
 import 'package:english_academy/simple_question_home.dart';
 import 'package:english_academy/to_be_ex.dart';
@@ -84,7 +86,23 @@ class _MainHomeState extends State<MainHome> {
             },
             child: Text('Relative Clauses'),
             color: Colors.blue,
+          ),
+
+          RaisedButton(
+            onPressed: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ClausesEx()));
+
+            },
+            child: Text('Clauses'),
+            color: Colors.blue,
+          ),
+          RaisedButton(
+            onPressed: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>PassiveVoiceHome()));
+
+            },
+            child: Text('Passive Voice'),
+            color: Colors.blue,
           )
+
 
         ],
       ),
