@@ -1,33 +1,25 @@
 
-import 'package:english_academy/perfect_continuous_ex.dart';
-import 'package:english_academy/perfect_tense_ex.dart';
-import 'package:english_academy/simple_tense_ex.dart';
+import 'package:english_academy/forms_of_tenses/perfect_continuous_ex.dart';
+import 'package:english_academy/forms_of_tenses/perfect_tense_ex.dart';
+import 'package:english_academy/forms_of_tenses/simple_tense_ex.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-class TensesTheory extends StatefulWidget {
-  const TensesTheory({Key? key}) : super(key: key);
+class TensesHome extends StatefulWidget {
+  const TensesHome({Key? key}) : super(key: key);
 
   @override
-  _TensesTheoryState createState() => _TensesTheoryState();
+  _TensesHomeState createState() => _TensesHomeState();
 }
 
-class _TensesTheoryState extends State<TensesTheory> {
+class _TensesHomeState extends State<TensesHome> {
   final double _borderRadius = 24;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('FORMS',style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
-            SizedBox(width: 8.0,),
-            Text('OF',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-            SizedBox(width: 8.0,),
-            Text('TENSES',style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),)
-          ],
-        ),
+      appBar:AppBar(
+        title: Text('Forms of Tenses'),
+        backgroundColor: Colors.pink.shade300,
+        centerTitle: true,
       ),
 
       body: SafeArea(
@@ -37,9 +29,8 @@ class _TensesTheoryState extends State<TensesTheory> {
             children: [
               SizedBox(height: 20.0,),
               Card (
-
+                color: Colors.green,
                 margin: EdgeInsets.all(10),
-                color: Colors.blue,
                 shadowColor: Colors.blueGrey,
                 elevation: 5,
                 child: Column(

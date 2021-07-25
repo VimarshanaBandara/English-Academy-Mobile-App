@@ -1,7 +1,7 @@
-import 'package:english_academy/simple_question_continuous_ex.dart';
-import 'package:english_academy/simple_question_perfct_ex.dart';
-import 'package:english_academy/simple_question_perfect_continuous_ex.dart';
-import 'package:english_academy/simple_questions_simple_ex.dart';
+import 'package:english_academy/simple_question/simple_question_continuous_ex.dart';
+import 'package:english_academy/simple_question/simple_question_perfct_ex.dart';
+import 'package:english_academy/simple_question/simple_question_perfect_continuous_ex.dart';
+import 'package:english_academy/simple_question/simple_questions_simple_ex.dart';
 import 'package:flutter/material.dart';
 class SimpleQuestionHome extends StatefulWidget {
   const SimpleQuestionHome({Key? key}) : super(key: key);

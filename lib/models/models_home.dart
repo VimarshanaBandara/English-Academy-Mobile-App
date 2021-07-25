@@ -6,10 +6,10 @@ import 'package:english_academy/models/may_might_ex.dart';
 import 'package:english_academy/models/maybe_mightbe_ex.dart';
 import 'package:english_academy/models/mayhave_mighthave_ex.dart';
 import 'package:english_academy/models/mayhavebeen_mighthavebeen_ex.dart';
-import 'package:english_academy/simple_question_continuous_ex.dart';
-import 'package:english_academy/simple_question_perfct_ex.dart';
-import 'package:english_academy/simple_question_perfect_continuous_ex.dart';
-import 'package:english_academy/simple_questions_simple_ex.dart';
+import 'package:english_academy/simple_question/simple_question_continuous_ex.dart';
+import 'package:english_academy/simple_question/simple_question_perfct_ex.dart';
+import 'package:english_academy/simple_question/simple_question_perfect_continuous_ex.dart';
+import 'package:english_academy/simple_question/simple_questions_simple_ex.dart';
 import 'package:flutter/material.dart';
 class ModelsHome extends StatefulWidget {
   const ModelsHome({Key? key}) : super(key: key);

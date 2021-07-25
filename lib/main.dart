@@ -1,6 +1,6 @@
 import 'package:english_academy/home_screen.dart';
 import 'package:english_academy/main_home_screen.dart';
-import 'package:english_academy/tenses_theory.dart';
+import 'package:english_academy/forms_of_tenses/tenses_theory.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp(MyApp());

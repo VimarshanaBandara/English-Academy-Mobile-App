@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class ToHaveTo extends StatelessWidget {
-  const ToHaveTo({Key? key}) : super(key: key);
+class ToHaveToEx extends StatelessWidget {
+  const ToHaveToEx({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
