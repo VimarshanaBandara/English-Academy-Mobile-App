@@ -1,12 +1,16 @@
 import 'package:english_academy/clauses/clauses_ex.dart';
 import 'package:english_academy/clauses/clauses_home.dart';
+import 'package:english_academy/complex_questions/complex_question_home.dart';
 import 'package:english_academy/conjunctions/conjunctions_home.dart';
 import 'package:english_academy/forms_of_tenses/tenses_theory.dart';
 import 'package:english_academy/freequency__adverbs/frequency_adverbs_ex.dart';
+import 'package:english_academy/freequency__adverbs/frequency_adverbs_home.dart';
+import 'package:english_academy/giving_advice/giving_advice_home.dart';
 import 'package:english_academy/making_request/making_request_ex.dart';
 import 'package:english_academy/making_request/making_request_home.dart';
 import 'package:english_academy/models/models_home.dart';
 import 'package:english_academy/passive%20voice/passive_voice_home.dart';
+import 'package:english_academy/plans/plans_home.dart';
 import 'package:english_academy/relative_clauses/relative_home.dart';
 import 'package:english_academy/simple_question/simple_question_home.dart';
 import 'package:english_academy/to_be/to_be_ex.dart';
@@ -39,6 +43,7 @@ class _MainHomeState extends State<MainHome> {
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
+
           child:Column(
             children: [
               RaisedButton(
@@ -50,7 +55,7 @@ class _MainHomeState extends State<MainHome> {
               ),
               RaisedButton(
                 onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsEx()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
                 },
                 child: Text('Frequency adverbs'),
                 color: Colors.blue,
@@ -142,6 +147,27 @@ class _MainHomeState extends State<MainHome> {
 
                 },
                 child: Text('Making Request'),
+                color: Colors.blue,
+              ),
+              RaisedButton(
+                onPressed: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>GivingAdviceHome()));
+
+                },
+                child: Text('Giving Advice'),
+                color: Colors.blue,
+              ),
+              RaisedButton(
+                onPressed: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>PlansHome()));
+
+                },
+                child: Text('Plans'),
+                color: Colors.blue,
+              ),
+              RaisedButton(
+                onPressed: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ComplexQuestionsHome()));
+
+                },
+                child: Text('Complex Questions'),
                 color: Colors.blue,
               )
 
