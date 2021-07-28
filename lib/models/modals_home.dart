@@ -1,83 +1,104 @@
-
-import 'package:english_academy/clauses/clauses_home.dart';
-import 'package:english_academy/complex_questions/complex_question_home.dart';
-import 'package:english_academy/conjunctions/conjunctions_home.dart';
-import 'package:english_academy/forms_of_tenses/tenses_theory.dart';
-import 'package:english_academy/giving_advice/giving_advice_home.dart';
-import 'package:english_academy/making_request/making_request_home.dart';
-import 'package:english_academy/models/modals_home.dart';
-import 'package:english_academy/plans/plans_home.dart';
-import 'package:english_academy/simple_question/simple_question_home.dart';
-import 'package:english_academy/suggestions/suggestions_home.dart';
-import 'package:english_academy/to_be/to_be_home.dart';
-import 'package:english_academy/to_do/to_do_home.dart';
-import 'package:english_academy/to_have/to_have_home.dart';
-import 'package:english_academy/to_have_to/to_have_to_home.dart';
+import 'package:english_academy/complex_questions/complex_question_perfect_continuous_ex.dart';
+import 'package:english_academy/complex_questions/complex_question_perfect_ex.dart';
+import 'package:english_academy/complex_questions/complex_question_theory.dart';
+import 'package:english_academy/complex_questions/complex_questions_continuous_ex.dart';
+import 'package:english_academy/complex_questions/complex_questions_simple_ex.dart';
+import 'package:english_academy/models/can_cant_ex.dart';
+import 'package:english_academy/models/canbe_cantbe_ex.dart';
+import 'package:english_academy/models/cant_have_been_ex.dart';
+import 'package:english_academy/models/cant_have_ex.dart';
+import 'package:english_academy/models/could_be_ex.dart';
+import 'package:english_academy/models/could_ex.dart';
+import 'package:english_academy/models/could_have_ex.dart';
+import 'package:english_academy/models/could_havebeen_ex.dart';
+import 'package:english_academy/models/may_might_ex.dart';
+import 'package:english_academy/models/maybe_mightbe_ex.dart';
+import 'package:english_academy/models/mayhave_mighthave_ex.dart';
+import 'package:english_academy/models/mayhavebeen_mighthavebeen_ex.dart';
+import 'package:english_academy/models/models_theory.dart';
+import 'package:english_academy/models/must_be_ex.dart';
+import 'package:english_academy/models/must_ex.dart';
+import 'package:english_academy/models/must_have_been_ex.dart';
+import 'package:english_academy/models/must_have_ex.dart';
+import 'package:english_academy/models/should_be_ex.dart';
+import 'package:english_academy/models/should_ex.dart';
+import 'package:english_academy/models/should_have_been_ex.dart';
+import 'package:english_academy/models/should_have_ex.dart';
 import 'package:flutter/material.dart';
-import 'package:english_academy/freequency__adverbs/frequency_adverbs_home.dart';
+class ModalsHome extends StatefulWidget {
+  const ModalsHome({Key? key}) : super(key: key);
 
-import 'making_promises/making_promises_home.dart';
-
-class MainHome extends StatefulWidget {
   @override
-  _MainHomeState createState() => _MainHomeState();
+  _ModalsHomeState createState() => _ModalsHomeState();
 }
 
-class _MainHomeState extends State<MainHome> {
+class _ModalsHomeState extends State<ModalsHome> {
   @override
   Widget build(BuildContext context) {
     var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Modals'),
+        centerTitle: true,
+      ),
+
       body: SingleChildScrollView(
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            ClipPath(
-              clipper: MyClipper(),
+          children: [
+             SizedBox(height: 15.0,),
+            Center(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                height: 200,
-                width: double.infinity,
+                width: (deviceWidth - 35) / 2,
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
                   gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
+                    begin: Alignment.topLeft,
+                    end: Alignment(0.8,
+                        0.0), // 10% of the width, so there are ten blinds.
                     colors: [
-                      Color(0xFF3383CD),
-                      Color(0xFF11249F),
-                    ],
+                      Colors.blue,
+                      Colors.lightBlueAccent,
+                      Colors.blue,
+                    ], // whitish to gray
+                    tileMode: TileMode
+                        .repeated, // repeats the gradient over the canvas
                   ),
                 ),
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(top: 30),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            "DashBoard",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                child: new Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  elevation: 0,
+                  color: Colors.transparent,
+                  child: Container(
+                    //width: deviceWidth/2.5,
+                    //height: 60,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        ListTile(
+
+                          title: Text(
+                            "Complex Questions Theory",
+                            style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
+                            textAlign:TextAlign.center,
                           ),
-
-                        ],
-                      ),
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>ModalsTheory()));
+                          },
+                        )
+                      ],
                     ),
-
-                  ],
+                  ),
                 ),
               ),
             ),
+            SizedBox(height: 20.0,),
 
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Text(
-                "Get Stronger",
+                "Models Examples",
                 style: TextStyle(
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
@@ -125,19 +146,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "To Be",
+                                  "May / Might",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ToBeHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MayMightEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //To Be
+                    ), //May-Might
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -171,19 +192,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "To Have",
+                                  "May have / Might have",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ToHaveHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MayHaveMightHaveEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //To Have
+                    ), //May have -Might have
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -217,19 +238,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "To Do",
+                                  "May be / Might be",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ToDoHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MayBeMightBeEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //To Do
+                    ), //May be/Might be
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -263,19 +284,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "To have to",
+                                  "May have been / Might have been",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ToHaveToHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MayHaveBeenMightHaveBeenEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //To Have to
+                    ), //May have been/Might have been
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -309,19 +330,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Forms of Tenses",
+                                  "Could",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>TensesHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CouldEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Forms of Tenses
+                    ), //could
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -355,19 +376,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Simple Questions",
+                                  "Could have",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>SimpleQuestionHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CouldHaveEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Simple Question
+                    ), //could have
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -401,19 +422,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Complex Questions",
+                                  "Could be",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ComplexQuestionsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CouldBeEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Complex Questions
+                    ), //could be
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -447,19 +468,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Modals",
+                                  "Could have been",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=> ModalsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CouldHaveBeenEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Modals
+                    ), //could have been
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -493,19 +514,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Negatives",
+                                  "Should",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ShouldEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Negatives
+                    ), //Should
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -539,19 +560,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Making Request",
+                                  "Should have",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MakingRequestHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ShouldHaveEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Making Request
+                    ), //Should have
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -585,19 +606,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Frequency Adverbs",
+                                  "Should be",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ShouldBeEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Frequency Adverbs
+                    ), //Should be
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -631,19 +652,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Giving Advice",
+                                  "Should have been",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>GivingAdviceHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ShouldHaveBeenEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Giving Advice
+                    ), //Should have been
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -677,19 +698,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Plans",
+                                  "Must",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>PlansHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MustEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Plans
+                    ), //Must
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -723,19 +744,111 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Suggestions",
+                                  "Must Have",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>SuggestionsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MustHaveEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Suggestions
+                    ), //Must have
+                    SizedBox(height: 80),
+                    Container(
+                      width: (deviceWidth - 35) / 2,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment(0.8,
+                              0.0), // 10% of the width, so there are ten blinds.
+                          colors: [
+                            Colors.blue,
+                            Colors.lightBlueAccent,
+                            Colors.blue,
+                          ], // whitish to gray
+                          tileMode: TileMode
+                              .repeated, // repeats the gradient over the canvas
+                        ),
+                      ),
+                      child: new Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        elevation: 0,
+                        color: Colors.transparent,
+                        child: Container(
+                          //width: deviceWidth/2.5,
+                          //height: 60,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              ListTile(
+
+                                  title: Text(
+                                    "Must be ",
+                                    style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
+                                    textAlign:TextAlign.center,
+                                  ),
+                                  onTap: (){
+                                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MustBeEx()));
+                                  }
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ), //Must be
+                    SizedBox(width: 15),
+                    Container(
+                      width: (deviceWidth - 35) / 2,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment(0.8,
+                              0.0), // 10% of the width, so there are ten blinds.
+                          colors: [
+                            Colors.blue,
+                            Colors.lightBlueAccent,
+                            Colors.blue,
+                          ], // whitish to gray
+                          tileMode: TileMode
+                              .repeated, // repeats the gradient over the canvas
+                        ),
+                      ),
+                      child: new Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        elevation: 0,
+                        color: Colors.transparent,
+                        child: Container(
+                          //width: deviceWidth/2.5,
+                          //height: 60,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              ListTile(
+
+                                title: Text(
+                                  "Must have been",
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
+                                  textAlign:TextAlign.center,
+                                ),
+                                onTap: (){
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MustHaveBeenEx()));
+                                },
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ), //Must have been
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -769,19 +882,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Clauses",
+                                  "Can / Can\'t",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ClausesHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CanCantEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Clauses
+                    ), //Can Cant
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -815,19 +928,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Making Promises",
+                                  "Can\'t have",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MakingPromisesHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CantHaveEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Making Promises
+                    ), //Cant have
                     SizedBox(height: 80),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -861,19 +974,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Conjunctions",
+                                  "Can be / Can\'t be ",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ConjunctionHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CanBeCantBeEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Conjunctions
+                    ), //Can be Cant be
                     SizedBox(width: 15),
                     Container(
                       width: (deviceWidth - 35) / 2,
@@ -907,111 +1020,19 @@ class _MainHomeState extends State<MainHome> {
                               ListTile(
 
                                 title: Text(
-                                  "Relative Clauses",
+                                  "Can\'t have been",
                                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CantHaveBeenEx()));
                                 },
                               )
                             ],
                           ),
                         ),
                       ),
-                    ), //Relative Clauses
-                    SizedBox(height: 80),
-                    Container(
-                      width: (deviceWidth - 35) / 2,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment(0.8,
-                              0.0), // 10% of the width, so there are ten blinds.
-                          colors: [
-                            Colors.blue,
-                            Colors.lightBlueAccent,
-                            Colors.blue,
-                          ], // whitish to gray
-                          tileMode: TileMode
-                              .repeated, // repeats the gradient over the canvas
-                        ),
-                      ),
-                      child: new Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: Container(
-                          //width: deviceWidth/2.5,
-                          //height: 60,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-
-                                title: Text(
-                                  "Passive Voice ",
-                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
-                                  textAlign:TextAlign.center,
-                                ),
-                                onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
-                                },
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ), //Passive Voice
-                    SizedBox(width: 15),
-                    Container(
-                      width: (deviceWidth - 35) / 2,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment(0.8,
-                              0.0), // 10% of the width, so there are ten blinds.
-                          colors: [
-                            Colors.blue,
-                            Colors.lightBlueAccent,
-                            Colors.blue,
-                          ], // whitish to gray
-                          tileMode: TileMode
-                              .repeated, // repeats the gradient over the canvas
-                        ),
-                      ),
-                      child: new Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: Container(
-                          //width: deviceWidth/2.5,
-                          //height: 60,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-
-                                title: Text(
-                                  "Double Passive Voice ",
-                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
-                                  textAlign:TextAlign.center,
-                                ),
-                                onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
-                                },
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ), //Double Passive Voice
+                    ), //cant have been
                     SizedBox(height: 80),
 
                   ],
@@ -1026,26 +1047,7 @@ class _MainHomeState extends State<MainHome> {
             ),
           ],
         ),
-      ),
-      drawer: Drawer(),
+      )
     );
-  }
-}
-
-class MyClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    var path = Path();
-    path.lineTo(0, size.height - 80);
-    path.quadraticBezierTo(
-        size.width / 2, size.height, size.width, size.height - 80);
-    path.lineTo(size.width, 0);
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) {
-    return false;
   }
 }

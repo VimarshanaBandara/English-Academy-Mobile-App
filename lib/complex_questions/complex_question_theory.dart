@@ -60,9 +60,8 @@ class _ComplexQuestionTheoryState extends State<ComplexQuestionTheory> {
                   SizedBox(height: 20.0,),
                   Text('What',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
                   SizedBox(height: 20.0,),
-                  Text('What colour ?\n\n'
-                      'What time ? - මොන පටද ? \n\n'
-                      'Like what ? - කීයටද ?\n\n'
+                  Text('What colour ? - මොන පටද ? \n\n'
+                      'What time ? - කීයටද ? \n\n'
                       'What else ? - වෙන මොනවද \n\n'
                       'Like what ? - මොකක් වගේද ?\n\n'
                       'With what ? - මොනවත් එක්කද ?\n\n'

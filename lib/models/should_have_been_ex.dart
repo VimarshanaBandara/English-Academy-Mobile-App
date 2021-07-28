@@ -55,7 +55,7 @@ class _ShouldHaveBeenExState extends State<ShouldHaveBeenEx> {
             ),
             Divider(),
             ListTile(
-              title: Text('ඔවුන් යහලුවන් වෙන්න තිබුනේ..',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              title: Text('ඔවුන් යහලුවන් වෙන්න තිබුනේ.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
               subtitle: Text('They should have been friends.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
@@ -70,7 +70,7 @@ class _ShouldHaveBeenExState extends State<ShouldHaveBeenEx> {
             ),
             Divider(),
             ListTile(
-              title: Text('ඔහු බස් නැවතුමේ ඉන්න තිබුනේ..',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+              title: Text('ඔහු බස් නැවතුමේ ඉන්න තිබුනේ.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
               subtitle: Text('He should have been at the bus stop.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
             ),
             Divider(),
