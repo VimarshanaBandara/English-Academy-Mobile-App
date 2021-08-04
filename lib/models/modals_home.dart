@@ -3,6 +3,7 @@ import 'package:english_academy/complex_questions/complex_question_perfect_ex.da
 import 'package:english_academy/complex_questions/complex_question_theory.dart';
 import 'package:english_academy/complex_questions/complex_questions_continuous_ex.dart';
 import 'package:english_academy/complex_questions/complex_questions_simple_ex.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:english_academy/models/can_cant_ex.dart';
 import 'package:english_academy/models/canbe_cantbe_ex.dart';
 import 'package:english_academy/models/cant_have_been_ex.dart';
@@ -39,6 +40,21 @@ class _ModalsHomeState extends State<ModalsHome> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Modals'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MainHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
+
         centerTitle: true,
       ),
 
@@ -79,7 +95,7 @@ class _ModalsHomeState extends State<ModalsHome> {
                         ListTile(
 
                           title: Text(
-                            "Complex Questions Theory",
+                            "Modals Theory",
                             style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                             textAlign:TextAlign.center,
                           ),

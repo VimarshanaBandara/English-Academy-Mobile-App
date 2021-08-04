@@ -1,3 +1,5 @@
+import 'package:english_academy/complex_questions/complex_question_home.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:flutter/material.dart';
 class ComplexQuestionContinuousEx extends StatelessWidget {
   const ComplexQuestionContinuousEx({Key? key}) : super(key: key);
@@ -16,6 +18,20 @@ class ComplexQuestionContinuousEx extends StatelessWidget {
             elevation: 0.0,
             // title: Text('FORM OF TENSES',style: TextStyle(color: Colors.black,fontSize: 15.0),),
             title: Text('Continuous Tense Complex'),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back,size: 27.0,),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ComplexQuestionsHome()));
+              },
+            ),
+            actions: [
+              IconButton(
+                  icon: Icon(Icons.home,size: 27.0),
+                  onPressed:  (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+                  }
+              ),
+            ],
 
             bottom: TabBar(
 

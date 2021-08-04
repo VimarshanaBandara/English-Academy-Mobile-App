@@ -1,3 +1,5 @@
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/relative_clauses/relative_home.dart';
 import 'package:flutter/material.dart';
 class WhereEX extends StatefulWidget {
   const WhereEX({Key? key}) : super(key: key);
@@ -13,7 +15,20 @@ class _WhereEXState extends State<WhereEX> {
       appBar: AppBar(
         title: Text('Where'),
         backgroundColor: Colors.pink.shade300,
-        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>RelativeClausesHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
       ),
       body:  Container(
         padding: EdgeInsets.only(top: 10.0),

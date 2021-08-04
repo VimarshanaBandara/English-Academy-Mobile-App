@@ -1,3 +1,5 @@
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/passive%20voice/passive_voice_home.dart';
 import 'package:flutter/material.dart';
 class SimplePassiveEx extends StatelessWidget {
   const SimplePassiveEx({Key? key}) : super(key: key);
@@ -15,16 +17,22 @@ class SimplePassiveEx extends StatelessWidget {
             backgroundColor: Colors.pink.shade300,
             elevation: 0.0,
             // title: Text('FORM OF TENSES',style: TextStyle(color: Colors.black,fontSize: 15.0),),
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Simple',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Passive',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Voice',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
-              ],
+            title:Text('Simple Passive Voice'),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back,size: 27.0,),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PassiveVoiceHome()));
+              },
             ),
+            actions: [
+              IconButton(
+                  icon: Icon(Icons.home,size: 27.0),
+                  onPressed:  (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+                  }
+              ),
+            ],
+
 
             bottom: TabBar(
 

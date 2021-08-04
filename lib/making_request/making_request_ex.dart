@@ -1,4 +1,6 @@
 import 'package:english_academy/clauses/clauses_ex.dart';
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/making_request/making_request_home.dart';
 import 'package:english_academy/to_be/to_be_ex.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,20 @@ class _MakingRequestExState extends State<MakingRequestEx> {
       appBar: AppBar(
         title: Text('Making Request'),
         backgroundColor: Colors.blue.shade300,
-        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MakingRequestHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
       ),
       body: SingleChildScrollView(
           child:Container(
@@ -25,10 +40,11 @@ class _MakingRequestExState extends State<MakingRequestEx> {
             child:  Padding(
               padding: EdgeInsets.only(top: 10.0,left: 18.0,right: 15.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Center(
-                    child: Text('You need some flowers for a function.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
-                  ),
+
+                     Text('You need some flowers for a function.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
+
                   SizedBox(height: 20.0,),
                   Text('1- Will you bring some flowers.\n'
                       '2- Would you bring some flowers.\n'
@@ -39,9 +55,9 @@ class _MakingRequestExState extends State<MakingRequestEx> {
                     ,style:TextStyle(fontSize: 17.0,color: Colors.black,fontWeight: FontWeight.bold),),
                   SizedBox(height: 20.0,),
 
-                  Center(
-                    child: Text('You need some some money.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
-                  ),
+
+                     Text('You need some some money.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
+
                   SizedBox(height: 20.0,),
                   Text('1- Will you lend some money.\n'
                       '2- Would you lend some money.\n'
@@ -53,9 +69,9 @@ class _MakingRequestExState extends State<MakingRequestEx> {
 
                   SizedBox(height: 20.0,),
 
-                  Center(
-                    child: Text('Ask somebody to pass the book.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
-                  ),
+
+                     Text('Ask somebody to pass the book.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
+
                   SizedBox(height: 20.0,),
                   Text('1- Will you pass the book.\n'
                       '2- Would you pass the book.\n'
@@ -67,9 +83,9 @@ class _MakingRequestExState extends State<MakingRequestEx> {
 
                   SizedBox(height: 20.0,),
 
-                  Center(
-                    child: Text('Ask somebody to switch off the TV.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
-                  ),
+
+                    Text('Ask somebody to switch off the TV.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
+
                   SizedBox(height: 20.0,),
                   Text('1- Will you switch off the TV.\n'
                       '2- Would you switch off the TV.\n'
@@ -81,9 +97,9 @@ class _MakingRequestExState extends State<MakingRequestEx> {
 
                   SizedBox(height: 20.0,),
 
-                  Center(
-                    child: Text('Ask someone to close the shutter.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
-                  ),
+
+                    Text('Ask someone to close the shutter.',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
+
                   SizedBox(height: 20.0,),
                   Text('1- Will you close the shutter.\n'
                       '2- Would you close the shutter.\n'

@@ -1,4 +1,6 @@
 import 'package:english_academy/clauses/clauses_ex.dart';
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/plans/plans_home.dart';
 import 'package:english_academy/to_be/to_be_ex.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,21 @@ class _PlansExState extends State<PlansEx> {
       appBar: AppBar(
         title: Text('Plans'),
         backgroundColor: Colors.blue.shade300,
-        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>PlansHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
+
       ),
       body: SingleChildScrollView(
           child:Container(

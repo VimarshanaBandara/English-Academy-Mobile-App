@@ -1,4 +1,6 @@
 import 'package:english_academy/clauses/clauses_ex.dart';
+import 'package:english_academy/complex_questions/complex_question_home.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:english_academy/to_be/to_be_ex.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +19,25 @@ class _ComplexQuestionTheoryState extends State<ComplexQuestionTheory> {
         title: Text('Complex Questions'),
         backgroundColor: Colors.blue.shade300,
         centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ComplexQuestionsHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
       ),
       body: SingleChildScrollView(
           child:Container(
             width: MediaQuery.of(context).size.width,
+
 
             decoration: BoxDecoration(
                 color: Colors.white,

@@ -1,3 +1,5 @@
+import 'package:english_academy/clauses/clauses_home.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:flutter/material.dart';
 class ClausesEx extends StatefulWidget {
   const ClausesEx({Key? key}) : super(key: key);
@@ -13,7 +15,21 @@ class _ClausesExState extends State<ClausesEx> {
       appBar: AppBar(
         title: Text('Clauses'),
         backgroundColor: Colors.pink.shade300,
-        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ClausesHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
+
       ),
       body:  Container(
         padding: EdgeInsets.only(top: 10.0),

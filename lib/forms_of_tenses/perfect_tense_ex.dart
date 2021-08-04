@@ -1,6 +1,8 @@
+import 'package:english_academy/forms_of_tenses/forms_of_tenses_home.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:flutter/material.dart';
-class ContinuousTenseEx extends StatelessWidget {
-  const ContinuousTenseEx({Key? key}) : super(key: key);
+class PerfectTenseEx extends StatelessWidget {
+  const PerfectTenseEx({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +17,22 @@ class ContinuousTenseEx extends StatelessWidget {
             backgroundColor: Colors.pink.shade300,
             elevation: 0.0,
             // title: Text('FORM OF TENSES',style: TextStyle(color: Colors.black,fontSize: 15.0),),
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('The',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Tense',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
-              ],
+            title: Text('The Perfect Tense'),
+            centerTitle: true,
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back,size: 27.0,),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>FormsOfTensesHome()));
+              },
             ),
+            actions: [
+              IconButton(
+                  icon: Icon(Icons.home,size: 27.0),
+                  onPressed:  (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+                  }
+              ),
+            ],
 
             bottom: TabBar(
 
@@ -67,111 +75,53 @@ class ContinuousTenseEx extends StatelessWidget {
               child:  ListView(
                 children: [
                   ListTile(
-                    title: Text('ඔවුන් චාරිකාව සැලසුම් කරමින් ඉන්නවා ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('They are organizing the trip.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔයා ගිහිල්ලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You have gone.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔයා අපිට උදව් කරමින් ඉන්නවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('You are helping us.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඇය ගිහිල්ලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('She has gone.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඇය ඉංග්‍රීසි උගන්වමින් ඉන්නවා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('She is teaching english.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔයා call කරලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You have called.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔහු වාර්තාව ලියමින් ඉන්නවා . ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('He is writing a report.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔහු ඉගෙනගෙන තියෙනවා. ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('He has learnt.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඇය නිවසක් ඉදිකරමින් ඉන්නවා ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('She is building a house.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔහු උයලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('He have cooked.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔහු T.V බලමින් ඉන්නවා . ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('He is watching T.V.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('අපි උත්සහ කරලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('We have tried.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔබ ඔහුව පුරුදු කරමින් ඉන්නවා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('You are training him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('මම කරලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('I have done.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔවුන් මොනවදෝ කතා කරමින් ඉන්නවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('They are talking about something.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔබ ලියලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You have written.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('අපි කේක් එකක් හදමින් ඉන්නවා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('We are making a cake.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔවුන් ඇයට ආරාධනා කරලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('They have educated him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔහු කල්පනා කරමින් ඉන්නවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('he is thinking.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-
-                ],
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 10.0),
-              child:  ListView(
-                children: [
-                  ListTile(
-                    title: Text('ඔවුන් චාරිකාව සැලසුම් කරමින් සිටියා ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('They were organizing the trip.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඔයා අපිට උදව් කරමින් සිටියා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('You were helping us.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඇය ඉංග්‍රීසි උගන්වමින් සිටියා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('She was teaching english.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඔහු වාර්තාව ලියමින්  සිටියා. ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('He was writing a report.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඇය නිවසක් ඉදිකරමින් සිටියා ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('She was building a house.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඔහු T.V බලමින් සිටියා . ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('He was watching T.V.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඔබ ඔහුව පුරුදු කරමින් සිටියා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('You were training him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඔවුන් මොනවදෝ කතා කරමින් සිටියා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('They were talking about something.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('අපි කේක් එකක් හදමින් සිටියා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('We were making a cake.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
-                  ),
-                  Divider(),
-                  ListTile(
-                    title: Text('ඔහු කල්පනා කරමින් සිටියා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('he was thinking.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔබ ඔහුව පුරුදු කරලා තියෙනවා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You have trained him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
 
@@ -183,53 +133,111 @@ class ContinuousTenseEx extends StatelessWidget {
               child:  ListView(
                 children: [
                   ListTile(
-                    title: Text('ඔවුන් චාරිකාව සැලසුම් කරමින් ඉඳීවි ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('They will be organizing the trip.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔයා ගිහිල්ලා තිබුනා',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You had gone.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔයා අපිට උදව් කරමින් ඉඳීවි .',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('You will be helping us.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඇය ගිහිල්ලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('She had gone.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඇය ඉංග්‍රීසි උගන්වමින් ඉඳීවි ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('She will be teaching english.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔයා call කරලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You had called.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔහු වාර්තාව ලියමින්  ඉඳීවි . ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('He will be writing a report.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔහු ඉගෙනගෙන තිබුනා. ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('He had learnt.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඇය නිවසක් ඉදිකරමින් ඉඳීවි ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('She will be building a house.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔහු උයලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('He had cooked.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔහු T.V බලමින් ඉඳීවි  . ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('He will be watching T.V.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('අපි උත්සහ කරලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('We had tried.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔබ ඔහුව පුරුදු කරමින් ඉඳීවි ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('You will be training him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('මම කරලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('I had done.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔවුන් මොනවදෝ කතා කරමින් ඉඳීවි .',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('They will be talking about something.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔබ ලියලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You had written.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('අපි කේක් එකක් හදමින් ඉඳීවි ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('We will be making a cake.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔවුන් ඇයට ආරාධනා කරලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('They had educated him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
                   ListTile(
-                    title: Text('ඔහු කල්පනා කරමින් ඉඳීවි .',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
-                    subtitle: Text('he will be thinking.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                    title: Text('ඔබ ඔහුව පුරුදු කරලා තිබුනා.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You had trained him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 10.0),
+              child:  ListView(
+                children: [
+                  ListTile(
+                    title: Text('ඔයා ගිහිල්ලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You will have gone.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('ඇය ගිහිල්ලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('She will have gone.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('ඔයා call කරලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You will have called.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('ඔහු ඉගෙනගෙන තියේවි. ',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('He will have learnt.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('ඔහු උයලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('He will have cooked.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('අපි උත්සහ කරලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('We will have tried.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('මම කරලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('I will have done.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('ඔබ ලියලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You will have written.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('ඔවුන් ඇයට ආරාධනා කරලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('They will have educated him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
+                  ),
+                  Divider(),
+                  ListTile(
+                    title: Text('ඔබ ඔහුව පුරුදු කරලා තියේවි.',style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.w700),),
+                    subtitle: Text('You will have trained him.',style: TextStyle(color: Colors.blueGrey,fontSize: 18.0,fontWeight: FontWeight.w700),),
                   ),
                   Divider(),
 

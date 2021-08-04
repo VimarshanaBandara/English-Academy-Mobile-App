@@ -1,3 +1,5 @@
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/simple_question/simple_question_home.dart';
 import 'package:flutter/material.dart';
 class SimpleQuestionContinuousEx extends StatelessWidget {
   const SimpleQuestionContinuousEx({Key? key}) : super(key: key);
@@ -15,16 +17,21 @@ class SimpleQuestionContinuousEx extends StatelessWidget {
             backgroundColor: Colors.pink.shade300,
             elevation: 0.0,
             // title: Text('FORM OF TENSES',style: TextStyle(color: Colors.black,fontSize: 15.0),),
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Continuous',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Tense',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Questions',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
-              ],
+            title:Text('Continuous Tense Questions'),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back,size: 27.0,),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SimpleQuestionHome()));
+              },
             ),
+            actions: [
+              IconButton(
+                  icon: Icon(Icons.home,size: 27.0),
+                  onPressed:  (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+                  }
+              ),
+            ],
 
             bottom: TabBar(
 

@@ -1,4 +1,6 @@
 import 'package:english_academy/clauses/clauses_ex.dart';
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/models/modals_home.dart';
 import 'package:english_academy/to_be/to_be_ex.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,20 @@ class _ModalsTheoryState extends State<ModalsTheory> {
       appBar: AppBar(
         title: Text('Modals Theory'),
         backgroundColor: Colors.blue.shade300,
-        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ModalsHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
       ),
       body: SingleChildScrollView(
           child:Container(

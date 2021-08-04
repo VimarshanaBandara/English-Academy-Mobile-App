@@ -3,6 +3,7 @@ import 'package:english_academy/complex_questions/complex_question_perfect_ex.da
 import 'package:english_academy/complex_questions/complex_question_theory.dart';
 import 'package:english_academy/complex_questions/complex_questions_continuous_ex.dart';
 import 'package:english_academy/complex_questions/complex_questions_simple_ex.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:flutter/material.dart';
 class ComplexQuestionsHome extends StatefulWidget {
   const ComplexQuestionsHome({Key? key}) : super(key: key);
@@ -18,7 +19,21 @@ class _ComplexQuestionsHomeState extends State<ComplexQuestionsHome> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Complex Question'),
-        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MainHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
+
       ),
 
       body: Column(

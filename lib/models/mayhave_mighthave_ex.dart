@@ -1,3 +1,5 @@
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/models/modals_home.dart';
 import 'package:flutter/material.dart';
 class MayHaveMightHaveEx extends StatelessWidget {
   const MayHaveMightHaveEx({Key? key}) : super(key: key);
@@ -15,16 +17,21 @@ class MayHaveMightHaveEx extends StatelessWidget {
             backgroundColor: Colors.pink.shade300,
             elevation: 0.0,
             // title: Text('FORM OF TENSES',style: TextStyle(color: Colors.black,fontSize: 15.0),),
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('May have',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('/',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Might have',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
-              ],
+            title: Text('May have / Might have'),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back,size: 27.0,),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ModalsHome()));
+              },
             ),
+            actions: [
+              IconButton(
+                  icon: Icon(Icons.home,size: 27.0),
+                  onPressed:  (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+                  }
+              ),
+            ],
 
             bottom: TabBar(
 

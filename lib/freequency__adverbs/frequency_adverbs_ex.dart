@@ -1,3 +1,5 @@
+import 'package:english_academy/freequency__adverbs/frequency_adverbs_home.dart';
+import 'package:english_academy/main_home_screen.dart';
 import 'package:flutter/material.dart';
 class FrequencyAdverbsEx extends StatefulWidget {
   const FrequencyAdverbsEx({Key? key}) : super(key: key);
@@ -13,7 +15,20 @@ class _FrequencyAdverbsExState extends State<FrequencyAdverbsEx> {
       appBar: AppBar(
         title: Text('Frequency Adverbs'),
           backgroundColor: Colors.pink.shade300,
-        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,size: 27.0,),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+          },
+        ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.home,size: 27.0),
+              onPressed:  (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+              }
+          ),
+        ],
       ),
       body:  Container(
         padding: EdgeInsets.only(top: 10.0),

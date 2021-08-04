@@ -1,23 +1,27 @@
 import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/negatives/negative_continuous_ex.dart';
+import 'package:english_academy/negatives/negative_perfect_continuous_ex.dart';
+import 'package:english_academy/negatives/negative_perfect_tense_ex.dart';
+import 'package:english_academy/negatives/negative_simple_ex.dart';
 import 'package:english_academy/simple_question/simple_question_continuous_ex.dart';
 import 'package:english_academy/simple_question/simple_question_perfct_ex.dart';
 import 'package:english_academy/simple_question/simple_question_perfect_continuous_ex.dart';
 import 'package:english_academy/simple_question/simple_questions_simple_ex.dart';
 import 'package:flutter/material.dart';
-class SimpleQuestionHome extends StatefulWidget {
-  const SimpleQuestionHome({Key? key}) : super(key: key);
+class NegativesHome extends StatefulWidget {
+  const NegativesHome({Key? key}) : super(key: key);
 
   @override
-  _SimpleQuestionHomeState createState() => _SimpleQuestionHomeState();
+  _NegativesHomeState createState() => _NegativesHomeState();
 }
 
-class _SimpleQuestionHomeState extends State<SimpleQuestionHome> {
+class _NegativesHomeState extends State<NegativesHome> {
   @override
   Widget build(BuildContext context) {
     var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Simple Question Home'),
+        title: Text('Negatives'),
         leading: IconButton(
           icon: Icon(Icons.arrow_back,size: 27.0,),
           onPressed: (){
@@ -32,7 +36,6 @@ class _SimpleQuestionHomeState extends State<SimpleQuestionHome> {
               }
           ),
         ],
-
       ),
       body: Column(
 
@@ -59,7 +62,7 @@ class _SimpleQuestionHomeState extends State<SimpleQuestionHome> {
                     ListTile(
 
                       title: Text(
-                        "Simple Questions Examples",
+                        "Negatives Examples",
                         style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 23.0),
                         textAlign:TextAlign.center,
                       ),
@@ -99,12 +102,12 @@ class _SimpleQuestionHomeState extends State<SimpleQuestionHome> {
                                 ListTile(
 
                                   title: Text(
-                                    "Simple Tense Questions ",
+                                    "Simple Tense Negatives ",
                                     style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                     textAlign:TextAlign.center,
                                   ),
                                   onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SimpleQuestionSimpleEx()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NegativeSimpleEx()));
                                   },
                                 )
                               ],
@@ -147,12 +150,12 @@ class _SimpleQuestionHomeState extends State<SimpleQuestionHome> {
                                 ListTile(
 
                                   title: Text(
-                                    "Continuous Tense Questions",
+                                    "Continuous Tense Negatives",
                                     style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                     textAlign:TextAlign.center,
                                   ),
                                   onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SimpleQuestionContinuousEx()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NegativeContinuousEx()));
                                   },
                                 )
                               ],
@@ -195,12 +198,12 @@ class _SimpleQuestionHomeState extends State<SimpleQuestionHome> {
                                 ListTile(
 
                                   title: Text(
-                                    "Perfect Tense Questions",
+                                    "Perfect Tense Negatives",
                                     style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                     textAlign:TextAlign.center,
                                   ),
                                   onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SimpleQuestionPerfectEx()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NegativePerfectEx()));
                                   },
                                 )
                               ],
@@ -243,12 +246,12 @@ class _SimpleQuestionHomeState extends State<SimpleQuestionHome> {
                                 ListTile(
 
                                   title: Text(
-                                    "Perfect Continuous Tense Questions",
+                                    "Perfect Continuous Tense Negatives",
                                     style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
                                     textAlign:TextAlign.center,
                                   ),
                                   onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SimpleQuestionPerfectContinuousEx()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NegativePerfectContinuousEx()));
                                   },
                                 )
                               ],

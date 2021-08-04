@@ -1,3 +1,5 @@
+import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/to_have/to_have_home.dart';
 import 'package:flutter/material.dart';
 class ToHaveEx extends StatelessWidget {
   const ToHaveEx({Key? key}) : super(key: key);
@@ -15,15 +17,23 @@ class ToHaveEx extends StatelessWidget {
             backgroundColor: Colors.pink.shade300,
             elevation: 0.0,
             // title: Text('FORM OF TENSES',style: TextStyle(color: Colors.black,fontSize: 15.0),),
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('To',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                SizedBox(width: 8.0,),
-                Text('Have',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-
-              ],
+            title:Text('To have Examples'),
+            centerTitle: true,
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back,size: 27.0,),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ToHaveHome()));
+              },
             ),
+            actions: [
+              IconButton(
+                  icon: Icon(Icons.home,size: 27.0),
+                  onPressed:  (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MainHome()));
+                  }
+              ),
+            ],
+
 
             bottom: TabBar(
 

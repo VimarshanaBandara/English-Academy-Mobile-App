@@ -1,12 +1,16 @@
-
 import 'package:english_academy/clauses/clauses_home.dart';
 import 'package:english_academy/complex_questions/complex_question_home.dart';
+import 'package:english_academy/conditionals/conditionals_home.dart';
 import 'package:english_academy/conjunctions/conjunctions_home.dart';
-import 'package:english_academy/forms_of_tenses/tenses_theory.dart';
+import 'package:english_academy/forms_of_tenses/forms_of_tenses_home.dart';
 import 'package:english_academy/giving_advice/giving_advice_home.dart';
+import 'package:english_academy/i_wish/i_wish_home.dart';
 import 'package:english_academy/making_request/making_request_home.dart';
 import 'package:english_academy/models/modals_home.dart';
+import 'package:english_academy/negatives/negatives_home.dart';
+import 'package:english_academy/passive%20voice/passive_voice_home.dart';
 import 'package:english_academy/plans/plans_home.dart';
+import 'package:english_academy/relative_clauses/relative_home.dart';
 import 'package:english_academy/simple_question/simple_question_home.dart';
 import 'package:english_academy/suggestions/suggestions_home.dart';
 import 'package:english_academy/to_be/to_be_home.dart';
@@ -16,6 +20,7 @@ import 'package:english_academy/to_have_to/to_have_to_home.dart';
 import 'package:flutter/material.dart';
 import 'package:english_academy/freequency__adverbs/frequency_adverbs_home.dart';
 
+import 'double_passive_coice/double_passive_voice_home.dart';
 import 'making_promises/making_promises_home.dart';
 
 class MainHome extends StatefulWidget {
@@ -314,7 +319,7 @@ class _MainHomeState extends State<MainHome> {
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>TensesHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FormsOfTensesHome()));
                                 },
                               )
                             ],
@@ -498,7 +503,7 @@ class _MainHomeState extends State<MainHome> {
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>NegativesHome()));
                                 },
                               )
                             ],
@@ -912,7 +917,7 @@ class _MainHomeState extends State<MainHome> {
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>RelativeClausesHome()));
                                 },
                               )
                             ],
@@ -958,7 +963,7 @@ class _MainHomeState extends State<MainHome> {
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>PassiveVoiceHome()));
                                 },
                               )
                             ],
@@ -1004,7 +1009,7 @@ class _MainHomeState extends State<MainHome> {
                                   textAlign:TextAlign.center,
                                 ),
                                 onTap: (){
-                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FrequencyAdverbsHome()));
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>DoublePassiveVoiceHome()));
                                 },
                               )
                             ],
@@ -1013,6 +1018,97 @@ class _MainHomeState extends State<MainHome> {
                       ),
                     ), //Double Passive Voice
                     SizedBox(height: 80),
+                    Container(
+                      width: (deviceWidth - 35) / 2,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment(0.8,
+                              0.0), // 10% of the width, so there are ten blinds.
+                          colors: [
+                            Colors.blue,
+                            Colors.lightBlueAccent,
+                            Colors.blue,
+                          ], // whitish to gray
+                          tileMode: TileMode
+                              .repeated, // repeats the gradient over the canvas
+                        ),
+                      ),
+                      child: new Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        elevation: 0,
+                        color: Colors.transparent,
+                        child: Container(
+                          //width: deviceWidth/2.5,
+                          //height: 60,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              ListTile(
+
+                                title: Text(
+                                  "Conditionals",
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
+                                  textAlign:TextAlign.center,
+                                ),
+                                onTap: (){
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>ConditionalsHome()));
+                                },
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ) ,//Conditionals,
+                    SizedBox(width: 15),
+                    Container(
+                      width: (deviceWidth - 35) / 2,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment(0.8,
+                              0.0), // 10% of the width, so there are ten blinds.
+                          colors: [
+                            Colors.blue,
+                            Colors.lightBlueAccent,
+                            Colors.blue,
+                          ], // whitish to gray
+                          tileMode: TileMode
+                              .repeated, // repeats the gradient over the canvas
+                        ),
+                      ),
+                      child: new Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        elevation: 0,
+                        color: Colors.transparent,
+                        child: Container(
+                          //width: deviceWidth/2.5,
+                          //height: 60,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              ListTile(
+
+                                title: Text(
+                                  "I Wish",
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
+                                  textAlign:TextAlign.center,
+                                ),
+                                onTap: (){
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>IWishHome()));
+                                },
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ) //I Wish ,
 
                   ],
                 ),

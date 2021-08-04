@@ -1,26 +1,24 @@
-import 'package:english_academy/clauses/clauses_ex.dart';
-import 'package:english_academy/giving_advice/giving_advice_ex.dart';
+import 'package:english_academy/i_wish/i_wish_ex.dart';
 import 'package:english_academy/main_home_screen.dart';
-import 'package:english_academy/making_request/making_request_ex.dart';
-import 'package:english_academy/plans/plans_ex.dart';
 import 'package:english_academy/to_be/to_be_ex.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-class PlansHome extends StatefulWidget {
-  const PlansHome({Key? key}) : super(key: key);
+class IWishHome extends StatefulWidget {
+  const IWishHome({Key? key}) : super(key: key);
 
   @override
-  _PlansHomeState createState() => _PlansHomeState();
+  _IWishHomeState createState() => _IWishHomeState();
 }
 
-class _PlansHomeState extends State<PlansHome> {
+class _IWishHomeState extends State<IWishHome> {
   @override
   Widget build(BuildContext context) {
     var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Plans'),
+        title: Text('I Wish'),
         backgroundColor: Colors.blue.shade300,
+        centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back,size: 27.0,),
           onPressed: (){
@@ -36,9 +34,10 @@ class _PlansHomeState extends State<PlansHome> {
           ),
         ],
 
+
       ),
       body: Container(
-        height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
             color: Colors.white,
             image: DecorationImage(
@@ -47,27 +46,27 @@ class _PlansHomeState extends State<PlansHome> {
               fit: BoxFit.cover, colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.dstATop),
             )
         ),
-        child:SingleChildScrollView(
+        child: SingleChildScrollView(
             child:Container(
               width: MediaQuery.of(context).size.width,
+
               child:  Padding(
                 padding: EdgeInsets.only(top: 10.0,left: 18.0,right: 15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    SizedBox(height: 20.0,),
-
-
-                    Text('Useful Phrases',style: TextStyle(fontSize: 22.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
+                    Text('I Wish',style: TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold,color: Colors.deepOrange,),),
 
                     SizedBox(height: 20.0,),
-                    Text('1- I am to -------> V\n\n'
-                        '2- I am going to -------> V\n\n'
-                        '3- I am -------> V_ _ _ing\n\n'
-                        '4- I am thinking -------> V_ _ _ing'
-                      ,style:TextStyle(fontSize: 17.0,color: Colors.black,fontWeight: FontWeight.bold),),
+                    Text('පවතින තත්වයක් නොපවතීවා යැයි හෝ \n\n'
+                        'නොපවතින තත්වයක් පවතිවා යැයි දක්වීමට\n\n'
+                        'මේ ආකාරයේ වාක්‍ය භාවිතා කරයි.\n\n\n'
+                        'Present form - I wish If  (S.Past)\n\n'
+                        'Past form - I wish If   (had P.P)',style:TextStyle(fontSize: 17.0,color: Colors.black,fontWeight: FontWeight.bold),),
+
                     SizedBox(height: 25.0,),
+
                     Center(
                       child: Container(
                         width: (deviceWidth - 35) / 2,
@@ -101,12 +100,12 @@ class _PlansHomeState extends State<PlansHome> {
                                 ListTile(
 
                                   title: Text(
-                                    "Plans Examples",
-                                    style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),
+                                    "I Wish Examples",
+                                    style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 19.0),
                                     textAlign:TextAlign.center,
                                   ),
                                   onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>PlansEx()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>IWishEx()));
                                   },
                                 )
                               ],
@@ -115,8 +114,6 @@ class _PlansHomeState extends State<PlansHome> {
                         ),
                       ),
                     ),
-
-                    SizedBox(height: 25.0,),
 
 
 
