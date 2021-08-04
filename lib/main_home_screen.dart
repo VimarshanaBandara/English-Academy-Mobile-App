@@ -57,18 +57,94 @@ class _MainHomeState extends State<MainHome> {
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(top: 30),
+                      padding: EdgeInsets.only(top: 26),
                       child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                         children: <Widget>[
+                          IconButton(
+                            onPressed: (){
+                             Navigator.push(context,MaterialPageRoute(builder: (context)=>Drawer(
+                               child: ListView(
+                                 children: [
+                                   Container(
+                                     height: 260.0,
+                                     decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.only(
+                                           bottomRight: Radius.circular(25.0),
+                                           bottomLeft: Radius.circular(25.0),
+                                         ),
+                                         color: Colors.grey
+                                     ),
+                                     child: Column(
+                                       children: [
+                                         Padding(
+                                           padding: EdgeInsets.only(top: 15.0),
+                                           child: Container(
+                                             width: 160.0,
+                                             height: 160.0,
+                                             decoration: BoxDecoration(
+                                                 image: DecorationImage(
+                                                   image: AssetImage('images/logo.jpg',),
+                                                   fit: BoxFit.cover,
+                                                 )
+                                             ),
+                                           ),
+                                         ),
+                                         SizedBox(height: 10.0,),
+                                         Text('English Academy',style: TextStyle(fontSize: 22.0,color: Colors.white,fontWeight: FontWeight.bold),),
+                                         Text('Powered by VM Mobile',style: TextStyle(fontSize: 20.0,color: Colors.white,fontWeight: FontWeight.bold),),
+                                       ],
+                                     ),
+                                   ),
+                                   ListTile(
+                                     leading: Icon(Icons.perm_device_information_outlined,color: Colors.black,),
+                                     title: Text('About',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.black),),
+                                     trailing: IconButton(
+                                       icon: Icon(Icons.menu,color: Colors.black),
+                                       onPressed: (){
+                                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutPage()));
+                                       },
+                                     ),
+                                   ),
+                                   Divider(),
+                                   ListTile(
+                                     leading: Icon(Icons.privacy_tip,color: Colors.black,),
+                                     title: Text('Privacy & policy',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.black),),
+                                     trailing: IconButton(
+                                       icon: Icon(Icons.menu,color: Colors.black),
+                                       onPressed: (){
+                                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyHome()));
+                                       },
+                                     ),
+                                   ),
+                                   Divider(),
+
+                                   ListTile(
+                                     leading: Icon(Icons.home,color: Colors.black),
+                                     title: Text('Home',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.black),),
+                                     trailing: IconButton(
+                                       icon: Icon(Icons.menu,color: Colors.black,),
+                                       onPressed: (){
+                                         Navigator.push(context, MaterialPageRoute(builder: (context)=>MainHome()));
+                                       },
+                                     ),
+                                   ),
+                                   Divider(),
+                                 ],
+                               ),
+                             )));
+                            },
+                            icon: Icon(Icons.menu,color: Colors.white,),
+                          ),
+                           SizedBox(width: 15.0,),
                           Text(
-                            "DashBoard",
+                            "English Academy",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 22),
                           ),
+
 
                         ],
                       ),
@@ -80,9 +156,9 @@ class _MainHomeState extends State<MainHome> {
             ),
 
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                "Get Stronger",
+                "Lessons",
                 style: TextStyle(
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
@@ -1123,7 +1199,8 @@ class _MainHomeState extends State<MainHome> {
           ],
         ),
       ),
-      drawer: Drawer(),
+
+
     );
   }
 }

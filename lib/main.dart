@@ -1,4 +1,5 @@
 import 'package:english_academy/main_home_screen.dart';
+import 'package:english_academy/splash_screen.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainHome(),
+      home: SplashScreen(),
     );
   }
 }
