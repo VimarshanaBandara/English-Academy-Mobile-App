@@ -86,7 +86,7 @@ class _GivingAdviceExState extends State<GivingAdviceEx> {
 
                   SizedBox(height: 20.0,),
                   Text('1-(Apply a loan) - You should apply a loan.\n'
-                      '2-(Sell the land)\n You ovght to sell the land.'
+                      '2-(Sell the land) - You ovght to sell the land.\n'
                       '3-(Borrow from your mother) - You had better borrow from your mother.\n'
                       '4-(Sell your van) - Why don\'t you sell your van.\n'
                       '5-(Give up that idea) - If I were you , I would give up that idea.'

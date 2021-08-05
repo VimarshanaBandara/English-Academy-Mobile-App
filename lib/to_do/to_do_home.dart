@@ -51,10 +51,10 @@ class _ToDoHomeState extends State<ToDoHome> {
               child:  Padding(
                 padding: EdgeInsets.only(top: 10.0,left: 18.0,right: 15.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Center(
-                      child: Text('ඒක වචන(Singular)',style: TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
-                    ),
+                      Text('ඒක වචන(Singular)',style: TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold,color: Colors.pink,),),
+
                     SizedBox(height: 20.0,),
                     Text('වර්තමාන කාලයේදී She,He,It වැනි පද සමඟ ක්‍රියාපදය Does ආකාරයට යොදයි.\n\n'
                         'අතීත කාලයේදී She,He,It වැනි පද සමඟ ක්‍රියාපදය Did ආකාරයට යොදයි.\n\n'
@@ -62,9 +62,9 @@ class _ToDoHomeState extends State<ToDoHome> {
 
                     SizedBox(height: 25.0,),
 
-                    Center(
-                      child: Text('බහු වචන(Plural)',style: TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold,color: Colors.purple),),
-                    ),
+
+                       Text('බහු වචන(Plural)',style: TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold,color: Colors.purple),),
+
                     SizedBox(height: 20.0,),
                     Text('වර්තමාන කාලයේදී We,They,You සහ I වැනි පද සමඟ ක්‍රියාපදය Do ආකාරයට යොදයි.\n\n'
                         'අතීත කාලයේදී We,They,You සහ I වැනි පද සමඟ ක්‍රියාපදය Did ආකාරයට යොදයි.\n\n'

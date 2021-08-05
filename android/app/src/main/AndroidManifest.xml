@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.englishacademyappvmm.english_academy">
    <application
-        android:label="english_academy"
+        android:label="English Academy"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

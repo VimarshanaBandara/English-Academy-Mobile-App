@@ -1,3 +1,4 @@
+import 'package:english_academy/about_screen.dart';
 import 'package:english_academy/clauses/clauses_home.dart';
 import 'package:english_academy/complex_questions/complex_question_home.dart';
 import 'package:english_academy/conditionals/conditionals_home.dart';
@@ -10,6 +11,7 @@ import 'package:english_academy/models/modals_home.dart';
 import 'package:english_academy/negatives/negatives_home.dart';
 import 'package:english_academy/passive%20voice/passive_voice_home.dart';
 import 'package:english_academy/plans/plans_home.dart';
+import 'package:english_academy/privacy_screen.dart';
 import 'package:english_academy/relative_clauses/relative_home.dart';
 import 'package:english_academy/simple_question/simple_question_home.dart';
 import 'package:english_academy/suggestions/suggestions_home.dart';
@@ -19,6 +21,7 @@ import 'package:english_academy/to_have/to_have_home.dart';
 import 'package:english_academy/to_have_to/to_have_to_home.dart';
 import 'package:flutter/material.dart';
 import 'package:english_academy/freequency__adverbs/frequency_adverbs_home.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'double_passive_coice/double_passive_voice_home.dart';
 import 'making_promises/making_promises_home.dart';
@@ -102,7 +105,7 @@ class _MainHomeState extends State<MainHome> {
                                      trailing: IconButton(
                                        icon: Icon(Icons.menu,color: Colors.black),
                                        onPressed: (){
-                                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutPage()));
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutPage()));
                                        },
                                      ),
                                    ),
@@ -113,7 +116,7 @@ class _MainHomeState extends State<MainHome> {
                                      trailing: IconButton(
                                        icon: Icon(Icons.menu,color: Colors.black),
                                        onPressed: (){
-                                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyHome()));
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyHome()));
                                        },
                                      ),
                                    ),
@@ -137,13 +140,7 @@ class _MainHomeState extends State<MainHome> {
                             icon: Icon(Icons.menu,color: Colors.white,),
                           ),
                            SizedBox(width: 15.0,),
-                          Text(
-                            "English Academy",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22),
-                          ),
+                          Text('English Academy',style: GoogleFonts.ubuntu(textStyle: TextStyle(fontSize: 28.0,color: Colors.white,fontWeight: FontWeight.bold),),),
 
 
                         ],
