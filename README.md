@@ -2,11 +2,11 @@
 
 **Screens**
 
-| ![](demo/ss1.png) | ![](demo/ss2.png) | ![](demo/ss3.png) | ![](demo/ss4.png) | ![](demo/ss5.png) |
+| ![](demo/ss1.jpg) | ![](demo/ss2.jpg) | ![](demo/ss3.jpg) | ![](demo/ss4.jpg) | ![](demo/ss5.jpg) | 
 | :-------------: | :-------------:  | :-------------:  | :-------------:  | :-------------:  |
 |     SS 01     |    SS 02   |    SS 03     |     SS 04       |     SS 05     |
 
-| ![](demo/PlayStore%20Icon.png) |
+| ![](demo/PlayStore%20Icon.jpg) |
 | :-------------: | 
 |     PlayStore     |   
 
